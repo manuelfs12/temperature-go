@@ -14,12 +14,12 @@ func main() {
 		return
 	}
 	convertedInput, _ := strconv.ParseFloat(userInput, 32)
-	fmt.Printf("%v° celsius is %v° kelvin\n", userInput, convertCelsiusToKelvin(convertedInput))
-	fmt.Printf("%v° celsius is %v° fahrenheit\n", userInput, convertCelsiusToFahrenheit(convertedInput))
-	fmt.Printf("%v Kelvin is %v Celsius\n", userInput, convertKelvinToCelsius(convertedInput))
-	fmt.Printf("%v Kelvin is %v Fahrenheit\n", userInput, convertKelvinToFahrenheit(convertedInput))
-	fmt.Printf("%v Fahrenheit is %v Celsius\n", userInput, convertFahrenheitToCelsius(convertedInput))
-	fmt.Printf("%v Fahrenheit is %v Kelvin\n", userInput, convertFahrenheitToKelvin(convertedInput))
+	fmt.Printf("%v° Celsius is %v° Kelvin\n", userInput, convertCelsiusToKelvin(convertedInput))
+	fmt.Printf("%v° Celsius is %v° Fahrenheit\n", userInput, convertCelsiusToFahrenheit(convertedInput))
+	fmt.Printf("%v° Kelvin is %v° Celsius\n", userInput, convertKelvinToCelsius(convertedInput))
+	fmt.Printf("%v° Kelvin is %v° Fahrenheit\n", userInput, convertKelvinToFahrenheit(convertedInput))
+	fmt.Printf("%v° Fahrenheit is %v° Celsius\n", userInput, convertFahrenheitToCelsius(convertedInput))
+	fmt.Printf("%v° Fahrenheit is %v° Kelvin\n", userInput, convertFahrenheitToKelvin(convertedInput))
 }
 
 func convertCelsiusToKelvin(temp float64) string {
