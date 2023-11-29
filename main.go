@@ -11,26 +11,43 @@ func main() {
 	fmt.Println("Temperature GO, a CLI tool to convert temperatures.")
 	fmt.Println("#------------------------------------------------#")
 	fmt.Println("Accepted inputs: <number><c | f | k>, Eg: 50c ")
-	fmt.Printf("Please enter a temperature: ")
-	_, err := fmt.Scan(&userInput)
-	if err != nil {
-		return
-	}
-	userInput = strings.ToLower(userInput)
-	if strings.Contains(userInput, "c") {
-		userInput = strings.Trim(userInput, "c")
-		convertedInput, _ := strconv.ParseFloat(userInput, 32)
-		convertCelsius(userInput, convertedInput)
-	} else if strings.Contains(userInput, "f") {
-		userInput = strings.Trim(userInput, "f")
-		convertedInput, _ := strconv.ParseFloat(userInput, 32)
-		convertFahrenheit(userInput, convertedInput)
-	} else if strings.Contains(userInput, "k") {
-		userInput = strings.Trim(userInput, "k")
-		convertedInput, _ := strconv.ParseFloat(userInput, 32)
-		convertKelvin(userInput, convertedInput)
-	} else {
-		println("Invalid input")
+	fmt.Println("To exit the application, type \"exit\"")
+	for !strings.Contains(userInput, "exit") {
+		fmt.Printf("Please enter a temperature: ")
+		_, err := fmt.Scan(&userInput)
+		if err != nil {
+			return
+		}
+		userInput = strings.ToLower(userInput)
+		if strings.Contains(userInput, "c") {
+			userInput = strings.Trim(userInput, "c")
+			convertedInput, err := strconv.ParseFloat(userInput, 32)
+			if err != nil {
+				fmt.Println("Invalid input")
+				continue
+			}
+			convertCelsius(userInput, convertedInput)
+		} else if strings.Contains(userInput, "f") {
+			userInput = strings.Trim(userInput, "f")
+			convertedInput, err := strconv.ParseFloat(userInput, 32)
+			if err != nil {
+				fmt.Println("Invalid input")
+				continue
+			}
+			convertFahrenheit(userInput, convertedInput)
+		} else if strings.Contains(userInput, "k") {
+			userInput = strings.Trim(userInput, "k")
+			convertedInput, err := strconv.ParseFloat(userInput, 32)
+			if err != nil {
+				fmt.Println("Invalid input")
+				continue
+			}
+			convertKelvin(userInput, convertedInput)
+		} else if strings.Contains(userInput, "exit") {
+			return
+		} else {
+			fmt.Println("Invalid input")
+		}
 	}
 }
 
