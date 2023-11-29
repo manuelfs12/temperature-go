@@ -16,21 +16,22 @@ func main() {
 	convertedInput, _ := strconv.ParseFloat(userInput, 32)
 	fmt.Printf("%v° celsius is %v° kelvin\n", userInput, convertCelsiusToKelvin(convertedInput))
 	fmt.Printf("%v° celsius is %v° fahrenheit\n", userInput, convertCelsiusToFahrenheit(convertedInput))
-	fmt.Printf("%v Kelvin us %v Celsisus", userInput, convertKelvinToFahrenheit(convertedInput))
+	fmt.Printf("%v Kelvin is %v Celsius\n", userInput, convertKelvinToCelsius(convertedInput))
+	fmt.Printf("%v Kelvin is %v Fahrenheit\n", userInput, convertKelvinToFahrenheit(convertedInput))
 }
 
-func convertCelsiusToKelvin(temp float64) float64 {
-	return temp + 273.15
+func convertCelsiusToKelvin(temp float64) string {
+	return fmt.Sprintf("%.2f", temp+273.15)
 }
 
-func convertCelsiusToFahrenheit(temp float64) float64 {
-	return (temp * 9 / 5) + 32
+func convertCelsiusToFahrenheit(temp float64) string {
+	return fmt.Sprintf("%.2f", (temp*9/5)+32)
 }
 
-func convertKelvinToCelsius(temp float64) float64 {
-	return temp - 273.15
+func convertKelvinToCelsius(temp float64) string {
+	return fmt.Sprintf("%.2f", temp-273.15)
 }
 
-func convertKelvinToFahrenheit(temp float64) float64 {
-	return (temp-273.15)*9/5 + 32
+func convertKelvinToFahrenheit(temp float64) string {
+	return fmt.Sprintf("%.2f", (temp-273.15)*9/5+32)
 }
