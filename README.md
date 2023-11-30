@@ -66,7 +66,7 @@ Early during the development of the application, I wrote functions with the diff
 This helped me organize my code a bit better and have `main()` more clean.
 
 #### Writing unit tests
-Testing is a topic I always wanted to dig in, and after reading a about it, 
+Testing is a topic I always wanted to dig in, and after reading about it, 
 I learned that writing unit tests in Go is relatively straightforward.
 1. The file needs to be named like `xxx_test.go`.
 2. The test function must start with the word `Test`.
