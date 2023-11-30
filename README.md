@@ -64,3 +64,11 @@ in Go to work with a single input, parse it and output the result to the termina
 #### Working with functions
 Early during the development of the application, I wrote functions with the different conversion formulas.
 This helped me organize my code a bit better and have `main()` more clean.
+
+#### Writing unit tests
+Testing is a topic I always wanted to dig in, and after reading a about it, 
+I learned that writing unit tests in Go is relatively straightforward.
+1. The file needs to be named like `xxx_test.go`.
+2. The test function must start with the word `Test`.
+3. The test function takes one argument only `t *testing.T`.
+4. To use the `t *testing.T` we need to import `"testing"` like we did with `"fmt"`.
