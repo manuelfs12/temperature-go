@@ -1,5 +1,5 @@
 # Temperature GO
-### Video Demo:  <URL HERE>
+### Video Demo:  [Link](https://youtu.be/MRzZix2o_o4)
 ### What is the project?
 This is a temperature conversion tool written in Go for the final project of CS50x.
 
@@ -36,7 +36,8 @@ declare the `main()` function and all the other functions that makes the applica
 #### Go vs Another language
 Since before starting CS50x, I was toying with the idea of learning Go, but got scared when I read that it was
 a combination of Python and C.
-After going through CS50x, and dipping my toes in C, it motivated me to work with Go, since I like static type languages.
+After going through CS50x, and dipping my toes in C,
+this encouraged me to work with Go because I like static type languages.
 
 I have previous experience working with languages like Python, Javascript and C#, But for this project I wanted to challenge
 myself and create something in a new language.
@@ -46,7 +47,7 @@ When I decided to use Go as my language for this project, I considered using a f
 This is the recommended framework on Go website for creating modern and powerful CLI applications, and
 it's the framework that empowers some everyday CLI tools like Kubernetes, GitHub CLI and others.
 
-Since this was going to be my first real project in Go, I preferred going with the standard library to 
+Considering that it was going to be my first real project in Go, I preferred going with the standard library to 
 get more familiar with the Go syntax and how things work within the language. 
 
 #### Handling the input
